@@ -30,6 +30,5 @@ object Day10 {
       case regex(posX, posY, velX, velY) => Dot(posX.toInt, posY.toInt, velX.toInt, velY.toInt)
     }.toSeq
     println(message(movingDots, 0))
-
   }
 }
