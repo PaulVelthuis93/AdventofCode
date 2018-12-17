@@ -59,7 +59,7 @@ object Day12{
       .map{case(step, cur, idx, _) => (step, idx, cur)}
     val (stableStep, stableIdx, stableStr: String) = stable.next
     val stableScore = calcSum(stableStr, stableIdx)
-    val nextStableScore = calcSum(stableStr, stableIdx + 1) - nextStableScore
+    val nextStableScore: Int = calcSum(stableStr, stableIdx + 1) - stableScore
     stableScore + (generations - stableStep + 1) * nextStableScore
   }
 
